@@ -1,6 +1,6 @@
 # Exported from:        http://SAIs-MacBook-Pro-2.local:5516/
 # Release version:      23.3.0
-# Date created:         Mon Dec 11 20:32:15 IST 2023
+# Date created:         Mon Dec 11 21:24:52 IST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -8,6 +8,32 @@ kind: Templates
 metadata:
   home: yoo
 spec:
+- template: bingo
+  scheduledStartDate: 2023-12-11T09:00:00+05:30
+  phases:
+  - phase: Ph1
+    tasks:
+    - name: t1
+      type: xlrelease.ScriptTask
+      script: print "bingo"
+    color: '#3d6c9e'
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_bingo_scriptUserPassword"
+  riskProfile: Default risk profile
+  author: admin
+  defaultTargetFolder: ./
+- template: find
+  scheduledStartDate: 2023-12-11T09:00:00+05:30
+  phases:
+  - phase: phase1
+    tasks:
+    - name: t1
+      type: xlrelease.ScriptTask
+      script: print "find"
+    color: '#3d6c9e'
+  riskProfile: Default risk profile
+  author: admin
+  defaultTargetFolder: ./
 - template: script
   scheduledStartDate: 2023-11-27T09:00:00+05:30
   phases:
@@ -61,6 +87,20 @@ spec:
     showOnReleaseStart: false
   scriptUsername: admin
   scriptUserPassword: !value "xlrelease_Release_test_scriptUserPassword"
+  riskProfile: Default risk profile
+  author: admin
+  defaultTargetFolder: ./
+- template: zing
+  scheduledStartDate: 2023-12-11T09:00:00+05:30
+  phases:
+  - phase: Ph1
+    tasks:
+    - name: t1
+      type: xlrelease.ScriptTask
+      script: print "Zing"
+    color: '#3d6c9e'
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_zing_scriptUserPassword"
   riskProfile: Default risk profile
   author: admin
   defaultTargetFolder: ./

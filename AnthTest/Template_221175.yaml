@@ -9,7 +9,7 @@ metadata:
   path: /
   home: anthem-test
 spec:
-- template: "221175"
+- template: Applications/Folder073243c8651e45828509c06fcb86ba28/Release37de2c3ae5f4492ea9f0c9d9a13798ec
   scheduledStartDate: 2025-01-09T09:00:00-05:00
   phases:
   - phase: New Phase

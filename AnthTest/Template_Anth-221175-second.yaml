@@ -9,17 +9,23 @@ metadata:
   path: /
   home: anthem-test
 spec:
-- template: "221175"
+- template: Anth-221175-second
   scheduledStartDate: 2025-01-09T09:00:00-05:00
   phases:
   - phase: New Phase
     tasks:
-    - name: CreateReleaseTask
+    - name: cr
       type: xlrelease.CreateReleaseTask
       owner: admin
-      newReleaseTitle: Rel-from-221175
-      template: markdown-test/1
+      newReleaseTitle: secondtemplate
+      templateVariables:
+      - type: xlrelease.StringVariable
+        key: user
+        label: Owner
+        description: The owner of the item.
+        value: admin
+      template: Samples & Tutorials/Welcome to Release!
   scriptUsername: admin
-  scriptUserPassword: !value "xlrelease_Release_221175_scriptUserPassword"
+  scriptUserPassword: !value "xlrelease_Release_Anth_221175_second_scriptUserPassword"
   riskProfile: Default risk profile
   author: admin

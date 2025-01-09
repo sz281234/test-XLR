@@ -1,0 +1,46 @@
+# Exported from:        http://MacBook-Pro.local:5516/
+# Release version:      24.1.3
+# Date created:         Thu Jan 09 12:44:52 EST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: anthem-test
+spec:
+- template: argocd-test
+  scheduledStartDate: 2024-07-22T09:00:00-04:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: Get sync status
+      type: argocd.getSyncStatus
+      argocdServer: argocd-docker
+      appName: dummy-app
+    - name: WFS
+      type: argocd.waitForStatus
+      argocdServer: argocd-docker
+      appName: daitest
+      syncStatus: Synced
+      owner: admin
+    - name: WFS (copy) (copy)
+      type: argocd.waitForStatus
+      argocdServer: argocd-docker
+      appName: daitest
+      syncStatus: OutOfSync
+      healthStatus: Healthy
+      retryWaitTime: 0
+      owner: admin
+    - name: WFS (copy)
+      type: argocd.waitForStatus
+      argocdServer: argocd-docker
+      appName: daitest
+      syncStatus: OutOfSync
+      healthStatus: Healthy
+      retryWaitTime: 1
+      owner: admin
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_argocd_test_scriptUserPassword"
+  riskProfile: Default risk profile
+  author: admin

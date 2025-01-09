@@ -1,0 +1,22 @@
+# Exported from:        http://MacBook-Pro.local:5516/
+# Release version:      24.1.3
+# Date created:         Thu Jan 09 12:44:52 EST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: anthem-test
+spec:
+- template: "221175"
+  scheduledStartDate: 2025-01-09T09:00:00-05:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: manual1
+      type: xlrelease.Task
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_221175_scriptUserPassword"
+  riskProfile: Default risk profile
+  author: admin

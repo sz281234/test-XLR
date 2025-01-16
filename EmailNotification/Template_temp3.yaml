@@ -9,13 +9,13 @@ metadata:
   path: /
   home: Email notification
 spec:
-- template: temp2
+- template: temp3
   scheduledStartDate: 2025-01-16T09:00:00-05:00
-  dueDate: 2025-01-16T10:00:00-05:00
   phases:
   - phase: New Phase
     tasks:
-    - name: "1"
-      type: xlrelease.Task
+    - name: "12"
+      type: xlrelease.CreateReleaseTask
+      template: ./Rolex-222514
   riskProfile: Default risk profile
   author: admin

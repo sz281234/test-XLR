@@ -1,6 +1,6 @@
 # Exported from:        http://MacBook-Pro.local:5516/
 # Release version:      24.1.3
-# Date created:         Thu Jan 16 11:18:00 EST 2025
+# Date created:         Thu Jan 16 11:19:32 EST 2025
 
 ---
 apiVersion: xl-release/v1
@@ -54,33 +54,6 @@ spec:
       template: Samples & Tutorials/Welcome to Release!
   scriptUsername: admin
   scriptUserPassword: !value "xlrelease_Release_Anth_221175_second_scriptUserPassword"
-  riskProfile: Default risk profile
-  author: admin
-- template: DUmmy-Ant
-  scheduledStartDate: 2025-01-16T09:00:00-05:00
-  phases:
-  - phase: New Phase
-    tasks:
-    - name: cr1
-      type: xlrelease.CreateReleaseTask
-      newReleaseTitle: dummy0aa
-      templateVariables:
-      - type: xlrelease.StringVariable
-        key: ACC environment
-        label: Title
-        description: The title of the item.
-        value: sai-1
-      - type: xlrelease.StringVariable
-        key: QA environment
-        label: Title
-        description: The title of the item.
-        value: sai-1.1
-      - type: xlrelease.StringVariable
-        key: package
-        label: Subject
-        description: Subject of the message.
-        value: abc
-      template: Samples & Tutorials/Sample Release Template
   riskProfile: Default risk profile
   author: admin
 - template: ERM

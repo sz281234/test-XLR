@@ -1,6 +1,6 @@
 # Exported from:        http://MacBook-Pro.local:5516/
 # Release version:      24.1.3
-# Date created:         Thu Jan 16 11:24:42 EST 2025
+# Date created:         Thu Jan 16 11:26:03 EST 2025
 
 ---
 apiVersion: xl-release/v1
@@ -10,6 +10,7 @@ metadata:
 spec:
 - template: Configure Release
   scheduledStartDate: 2024-07-15T09:00:00-04:00
+  dueDate: 2024-07-15T10:00:00-04:00
   phases:
   - phase: Setup mail server
     tasks:
@@ -119,6 +120,7 @@ spec:
 
     For more information, please read [Perform Blue/Green deployments](https://docs.digital.ai/bundle/devops-release-version-v.24.1/page/release/how-to/perform-blue-green-deployments.html) on our documentation site.
   scheduledStartDate: 2018-01-23T03:00:00-05:00
+  dueDate: 2018-01-23T04:00:00-05:00
   phases:
   - phase: Select new environment
     tasks:
@@ -268,6 +270,7 @@ spec:
 
     For more information, please read [Perform canary deployments](https://docs.digital.ai/bundle/devops-release-version-v.24.1/page/release/how-to/perform-canary-deployments.html) on our documentation site.
   scheduledStartDate: 2018-01-23T03:00:00-05:00
+  dueDate: 2018-01-23T04:00:00-05:00
   phases:
   - phase: Canary phase
     tasks:
@@ -392,6 +395,7 @@ spec:
   riskProfile: Default risk profile
 - template: Guided Tour for Release Managers
   scheduledStartDate: 2024-07-15T09:00:00-04:00
+  dueDate: 2024-07-15T10:00:00-04:00
   phases:
   - phase: Designing a release
     tasks:
@@ -590,6 +594,7 @@ spec:
 - template: Sample Release Template
   description: Major and minor release template using manual deployments.
   scheduledStartDate: 2024-07-15T09:00:00-04:00
+  dueDate: 2024-07-15T10:00:00-04:00
   phases:
   - phase: QA
     tasks:
@@ -752,6 +757,7 @@ spec:
 - template: Sample Release Template with Digital.ai Deploy
   description: Major and minor release template.
   scheduledStartDate: 2024-07-15T09:00:00-04:00
+  dueDate: 2024-07-15T10:00:00-04:00
   phases:
   - phase: QA
     tasks:
@@ -917,6 +923,7 @@ spec:
   riskProfile: Default risk profile
 - template: Welcome to Release!
   scheduledStartDate: 2024-07-15T09:00:00-04:00
+  dueDate: 2024-07-15T10:00:00-04:00
   phases:
   - phase: Introduction
     tasks:
@@ -1022,6 +1029,15 @@ spec:
     label: Owner
     description: The owner of the item.
   riskProfile: Default risk profile
+- template: XYZ
+  scheduledStartDate: 2025-01-16T09:00:00-05:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: "1"
+      type: xlrelease.Task
+  riskProfile: Default risk profile
+  author: admin
 - name: Deployments
   type: xlrelease.DeploymentsByStageDashboard
   owner: admin

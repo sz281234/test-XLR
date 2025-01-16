@@ -1,0 +1,54 @@
+# Exported from:        http://MacBook-Pro.local:5516/
+# Release version:      24.1.3
+# Date created:         Thu Jan 16 11:37:06 EST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: markdown-test
+spec:
+- template: "1"
+  scheduledStartDate: 2024-07-17T09:00:00-04:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: notification
+      type: xlrelease.NotificationTask
+      addresses:
+      - pprakash@digital.ai
+      subject: From Release with markup text
+      body: |-
+        # My Page Title
+        ## ​My First Heading
+        My First Paragraph
+
+        Choose between **bold** and *italic*.
+        Please visit the [Digital.ai website](https://digital.ai/).
+        demo code {
+            color: #efefef;
+            padding: 5;
+        }
+    - name: "1"
+      type: xlrelease.Task
+    - name: notification (copy)
+      type: xlrelease.NotificationTask
+      addresses:
+      - pprakash@digital.ai
+      subject: From Release with markup text
+      body: |-
+        <div style ="text-align:center"> ** SAMPLE NOTES ** </div>
+        <span style="color:red"> Build Version: 1.5.0-283 </span>
+    - name: "1"
+      type: xlrelease.Task
+    - name: notification (copy) (copy)
+      type: xlrelease.NotificationTask
+      addresses:
+      - pprakash@digital.ai
+      subject: From Release with markup text
+      body: |-
+        <div style ="text-align:center"> ** SAMPLE NOTES ** </div>
+        <span style="color:red"> Build Version: 1.5.0-283 </span>
+  riskProfile: Default risk profile
+  author: admin

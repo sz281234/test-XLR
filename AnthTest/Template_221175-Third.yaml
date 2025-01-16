@@ -9,7 +9,7 @@ metadata:
   path: /
   home: anthem-test
 spec:
-- template: "221175"
+- template: 221175-Third
   scheduledStartDate: 2025-01-09T09:00:00-05:00
   phases:
   - phase: New Phase
@@ -17,9 +17,9 @@ spec:
     - name: CreateReleaseTask
       type: xlrelease.CreateReleaseTask
       owner: admin
-      newReleaseTitle: Rel-from-221175
-      template: markdown-test/1
+      newReleaseTitle: Rel-from-221175-3
+      template: ./221175
   scriptUsername: admin
-  scriptUserPassword: !value "xlrelease_Release_221175_scriptUserPassword"
+  scriptUserPassword: !value "xlrelease_Release_221175_Third_scriptUserPassword"
   riskProfile: Default risk profile
   author: admin

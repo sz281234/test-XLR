@@ -1,6 +1,6 @@
 # Exported from:        http://MacBook-Pro.local:5516/
 # Release version:      24.1.3
-# Date created:         Thu Jan 16 11:53:15 EST 2025
+# Date created:         Thu Jan 16 12:06:06 EST 2025
 
 ---
 apiVersion: xl-release/v1
@@ -11,11 +11,19 @@ metadata:
 spec:
 - template: temp3
   scheduledStartDate: 2025-01-16T09:00:00-05:00
+  dueDate: 2025-01-16T10:00:00-05:00
   phases:
   - phase: New Phase
     tasks:
     - name: "12"
       type: xlrelease.CreateReleaseTask
       template: ./Rolex-222514
+      folder: "${foldertitle}"
+  variables:
+  - type: xlrelease.StringVariable
+    key: foldertitle
+    requiresValue: false
+    showOnReleaseStart: false
+    value: Applications/Folder182bb35b0b6f4e1a9014a51afa91e5b5
   riskProfile: Default risk profile
   author: admin
